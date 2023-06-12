@@ -3,8 +3,7 @@ import { Box, Button, TextField, Typography } from '@mui/material'
 import { useDispatch } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 import { login } from '../redux/actions/auth'
-import { GoogleLogin } from '@react-oauth/google'
-// import GoogleLogin from './GoogleLogin'
+import GoogleLogin from './GoogleLogin'
 
 const Login = () => {
     const dispatch = useDispatch()
@@ -39,7 +38,7 @@ const Login = () => {
 
                 <Button color='secondary' variant='contained' sx={{height:'50px', width: '100%'}} onClick={handleSubmit}>Login</Button>
                 <Box sx={{ height: '50px', width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                    <GoogleLogin buttonText="Google" />
+                    <GoogleLogin buttonText="Login with Google" />
                 </Box>
 
                 <Typography sx={{justifySelf:'center'}}>Don't have an account? <Link to='/register'>Sign up</Link></Typography>

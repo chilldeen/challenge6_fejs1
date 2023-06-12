@@ -92,7 +92,7 @@ export const login = (data, navigate) => async (dispatch) => {
   export const googleLogin = (data, navigate) => async (dispatch) => {
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_GOOGLE_CLIENT_ID}/api/v1/auth/google`,
+        `${process.env.REACT_APP_AUTH_API}/api/v1/auth/google`,
         data,
         {'Content-Type': 'application/json'}
       )
