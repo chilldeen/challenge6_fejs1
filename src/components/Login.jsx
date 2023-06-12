@@ -37,9 +37,7 @@ const Login = () => {
                 <TextField id='outlined-basic' label='Password' variant='outlined' type='password' fullWidth sx={{ width: '100%' }} onChange={(e) => setPassword(e.target.value)}/>
 
                 <Button color='secondary' variant='contained' sx={{height:'50px', width: '100%'}} onClick={handleSubmit}>Login</Button>
-                <Box sx={{ height: '50px', width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                    <GoogleLogin buttonText="Login with Google" />
-                </Box>
+                <GoogleLogin buttonText="Login with Google" />
 
                 <Typography sx={{justifySelf:'center'}}>Don't have an account? <Link to='/register'>Sign up</Link></Typography>
             </Box>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useGoogleLogin } from '@react-oauth/google'
-import { Button } from 'react-bootstrap'
+import { Button } from '@mui/material'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { googleLogin } from '../redux/actions/auth'
@@ -20,7 +20,7 @@ const GoogleLogin = ({ buttonText }) => {
     })
     
     return (
-        <Button variant='primary' onClick={() => login()}>
+        <Button color='secondary' variant='outlined' sx={{height:'50px', width: '100%'}} onClick={() => login()}>
             {buttonText}
         </Button>
     )
